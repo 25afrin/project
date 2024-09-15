@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Delivery Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Pizza Delivery Application</h1>
+        <nav>
+            <ul>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#menu">Pizza Menu</a></li>
+                <li><a href="#customize">Customize Pizza</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="login">
+        <h2>Login or Register</h2>
+        <form action="/login" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Login</button>
+            <a href="/register">Register</a>
+        </form>
+    </section>
+    <section id="menu">
+        <h2>Available Pizza Varieties</h2>
+        <div class="pizza-list">
+            <div class="pizza-item">
+                <h3>Margherita</h3>
+                <p>A classic cheese pizza with tomato base.</p>
+                <button>Order Now</button>
+            </div>
+            <div class="pizza-item">
+                <h3>Pepperoni</h3>
+                <p>Pepperoni with mozzarella cheese.</p>
+                <button>Order Now</button>
+            </div>
+        </div>
+    </section>
+    <section id="customize">
+        <h2>Customize Your Pizza</h2>
+        <form action="/order" method="POST">
+            <label for="base">Choose Pizza Base:</label>
+            <select id="base" name="base">
+                <option value="thin">Thin Crust</option>
+                <option value="thick">Thick Crust</option>
+                <option value="gluten-free">Gluten-Free</option>
+            </select>
+            <br>
+
+            <label for="sauce">Choose Sauce:</label>
+            <select id="sauce" name="sauce">
+                <option value="tomato">Tomato Sauce</option>
+                <option value="pesto">Pesto</option>
+                <option value="alfredo">Alfredo</option>
+            </select>
+            <br>
+
+            <label for="cheese">Choose Cheese:</label>
+            <select id="cheese" name="cheese">
+                <option value="mozzarella">Mozzarella</option>
+                <option value="cheddar">Cheddar</option>
+                <option value="parmesan">Parmesan</option>
+            </select>
+            <br>
+
+            <label for="veggies">Choose Veggies:</label>
+            <input type="checkbox" name="veggies" value="tomato">Tomato
+            <input type="checkbox" name="veggies" value="onion">Onion
+            <input type="checkbox" name="veggies" value="peppers">Peppers
+            <br>
+
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 Pizza Delivery Application</p>
+    </footer>
+</body>
+</html>
